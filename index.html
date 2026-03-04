@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Escuela de Música Talentos Artísticos | Escobedo, NL</title>
+    <meta
+      name="description"
+      content="Academia artística en Escobedo. Clases de canto, bajo quinto, acordeón, guitarra, batería y piano. Agenda tu clase por WhatsApp."
+    />
+    <meta name="theme-color" content="#090d1f" />
+    <meta property="og:title" content="Escuela de Música Talentos Artísticos" />
+    <meta property="og:description" content="Formación musical práctica con ambiente comunitario en Plaza Boulevard, Escobedo." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="logoportada.png" />
+    <meta property="og:locale" content="es_MX" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Instrument+Serif&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MusicSchool",
+        "name": "Escuela de Música Talentos Artísticos",
+        "alternateName": "Escuela De Música Talentos Artísticos Gral. Escobedo",
+        "telephone": "+52-81-1886-7675",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Benito Juárez, Héroes del 47, Col. Las Encinas, Plaza Boulevard",
+          "addressLocality": "General Escobedo",
+          "addressRegion": "Nuevo León",
+          "postalCode": "66050",
+          "addressCountry": "MX"
+        },
+        "description": "Escuela con enfoque práctico para formación musical y desarrollo de talento artístico.",
+        "areaServed": "General Escobedo"
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+    <header class="header">
+      <div class="container nav-wrap">
+        <a href="#inicio" class="brand" aria-label="Ir al inicio">
+          <img src="logodorado.png" alt="Logo Talentos Artísticos" />
+          <span>Talentos Artísticos</span>
+        </a>
+
+        <button class="menu-toggle" aria-expanded="false" aria-controls="menu">Menú</button>
+
+        <nav id="menu" class="menu" aria-label="Navegación principal">
+          <a href="#instrumentos">Instrumentos</a>
+          <a href="#recomendador">Recomendador</a>
+          <a href="#metodo">Método</a>
+          <a href="#blog">Blog</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <a class="btn btn-wa" href="https://wa.me/528118867675" target="_blank" rel="noopener noreferrer">Agenda por WhatsApp</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-grid">
+          <div>
+            <p class="pill">Visítanos con cita previa</p>
+            <h1>Convierte tu pasión en <span>música real</span>.</h1>
+            <p class="hero-copy">
+              En <strong>Escuela de Música Talentos Artísticos</strong> te enseñamos tocando: práctica constante,
+              repertorio útil y un ambiente cercano para desarrollar talento de verdad.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-gold" href="#contacto">Agenda tu clase de música</a>
+              <a class="btn btn-outline" href="#instrumentos">Ver instrumentos</a>
+            </div>
+            <ul class="hero-stats">
+              <li>👥 +2.3 mil seguidores</li>
+              <li>🎬 Videos de progreso reales</li>
+              <li>📍 Plaza Boulevard, Escobedo</li>
+            </ul>
+          </div>
+
+          <aside class="hero-panel">
+            <h2>Empieza en 3 pasos</h2>
+            <ol>
+              <li>Elige instrumento</li>
+              <li>Completa tu ficha</li>
+              <li>Recibe respuesta por WhatsApp</li>
+            </ol>
+            <a class="btn btn-gold wide" href="#contacto">Comenzar ahora</a>
+          </aside>
+        </div>
+      </section>
+
+      <section id="instrumentos" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Nuestros instrumentos</h2>
+            <p>Haz clic en uno para prellenarlo automáticamente en tu formulario.</p>
+          </div>
+
+          <div class="instrument-grid">
+            <button class="instrument" data-inst="Canto"><span>🎤</span>Canto</button>
+            <button class="instrument" data-inst="Bajo quinto"><span>🪕</span>Bajo quinto</button>
+            <button class="instrument" data-inst="Acordeón"><span>🪗</span>Acordeón</button>
+            <button class="instrument" data-inst="Guitarra"><span>🎸</span>Guitarra</button>
+            <button class="instrument" data-inst="Batería"><span>🥁</span>Batería</button>
+            <button class="instrument" data-inst="Piano"><span>🎹</span>Piano</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="recomendador" class="section section-soft">
+        <div class="container">
+          <div class="section-head">
+            <h2>¿No sabes qué elegir?</h2>
+            <p>Escribe tus gustos y te recomendamos instrumento sin usar APIs externas.</p>
+          </div>
+
+          <div class="recommender">
+            <label for="tasteInput">Cuéntanos qué música te gusta</label>
+            <textarea id="tasteInput" rows="4" placeholder="Ej: Me gusta la música norteña, quiero algo expresivo y tocar en grupo."></textarea>
+            <button id="recommendBtn" class="btn btn-purple" type="button">Generar recomendación</button>
+            <div id="recommendOutput" class="recommend-output" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="metodo" class="section section-dark">
+        <div class="container">
+          <div class="section-head">
+            <h2>Propuesta de valor</h2>
+            <p>Enfoque práctico y ambiente comunitario para jóvenes y adolescentes.</p>
+          </div>
+          <div class="value-grid">
+            <article>
+              <h3>Aprendizaje práctico</h3>
+              <p>Aplicas técnica en canciones reales desde la primera clase.</p>
+            </article>
+            <article>
+              <h3>Formación artística</h3>
+              <p>Trabajas ritmo, interpretación y seguridad escénica.</p>
+            </article>
+            <article>
+              <h3>Comunidad activa</h3>
+              <p>Clases cercanas, publicaciones con alumnos y progreso visible.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="blog" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Talento en acción</h2>
+            <p>Contenido que representa el estilo real de la academia.</p>
+          </div>
+
+          <div class="post-grid">
+            <article class="post">
+              <p class="tag">Video de alumnos</p>
+              <h3>“Buenos días jóvenes, ya andamos en las clases”</h3>
+              <p>Ensayo en vivo y correcciones prácticas para mejorar rápido.</p>
+            </article>
+            <article class="post">
+              <p class="tag">Clase activa</p>
+              <h3>Sesión acordeón + bajo quinto</h3>
+              <p>Trabajo de ensamble regional para coordinación y musicalidad.</p>
+            </article>
+            <article class="post">
+              <p class="tag">Anuncio</p>
+              <h3>Horarios nuevos por cita previa</h3>
+              <p>Atención organizada para darte seguimiento real.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="section contact-section">
+        <div class="container contact-grid">
+          <article class="panel">
+            <h2>Agenda tu clase</h2>
+            <p>Completando tu ficha te respondemos más rápido y con mejor seguimiento.</p>
+            <ul>
+              <li><strong>WhatsApp:</strong> 81 1886 7675</li>
+              <li><strong>Dirección:</strong> Av. Benito Juárez, Plaza Boulevard, Escobedo, NL</li>
+              <li><strong>Facebook:</strong> Escuela De Música "Talentos Artísticos" Gral. Escobedo</li>
+              <li><strong>Modalidad:</strong> Cita previa</li>
+            </ul>
+          </article>
+
+          <form id="leadForm" class="panel form" novalidate>
+            <h3>Ficha musical</h3>
+            <label>Nombre completo
+              <input name="nombre" type="text" required placeholder="Ej. Ana Rodríguez" />
+            </label>
+            <label>Edad
+              <input name="edad" type="number" min="5" max="99" required placeholder="Ej. 16" />
+            </label>
+            <label>Instrumento
+              <select name="instrumento" id="instrumentSelect" required>
+                <option value="">Selecciona uno</option>
+                <option>Canto</option>
+                <option>Bajo quinto</option>
+                <option>Acordeón</option>
+                <option>Guitarra</option>
+                <option>Batería</option>
+                <option>Piano</option>
+              </select>
+            </label>
+            <label>Nivel
+              <select name="nivel" required>
+                <option value="">Selecciona nivel</option>
+                <option>Principiante</option>
+                <option>Intermedio</option>
+                <option>Avanzado</option>
+              </select>
+            </label>
+            <label>Horario preferido
+              <select name="horario" required>
+                <option value="">Selecciona horario</option>
+                <option>Mañana</option>
+                <option>Tarde</option>
+                <option>Noche</option>
+              </select>
+            </label>
+            <label>WhatsApp
+              <input name="wa" type="tel" required placeholder="8112345678" />
+            </label>
+            <button class="btn btn-gold wide" type="submit">Enviar y abrir WhatsApp</button>
+            <p id="formStatus" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section id="ubicacion" class="section section-soft center">
+        <div class="container">
+          <div class="section-head">
+            <h2>Ubicación estratégica</h2>
+            <p>Estamos en Plaza Boulevard, General Escobedo.</p>
+          </div>
+          <a class="btn btn-outline dark" href="https://maps.google.com/?q=Plaza+Boulevard+General+Escobedo" target="_blank" rel="noopener noreferrer">Ver en Google Maps</a>
+        </div>
+      </section>
+    </main>
+
+    <a class="wa-float" href="https://wa.me/528118867675" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+
+    <footer class="footer">
+      <div class="container">
+        <p><strong>Escuela de Música Talentos Artísticos</strong></p>
+        <p>General Escobedo, Nuevo León · © <span id="year"></span></p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
